@@ -1,0 +1,12 @@
+### PROTECT FILES ###
+<FilesMatch "\.(htaccess|htpasswd|ini|fla|psd|log|sh)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+
+
+RewriteEngine on
+RewriteRule puppet-online-shop index.php
+RewriteRule shop-basket userBasket.php
+RewriteRule login-register logReg.php

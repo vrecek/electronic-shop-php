@@ -1,0 +1,252 @@
+/*
+font-family: 'Roboto', sans-serif;
+*/
+
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+}
+
+body{
+   height: 100vh;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;
+   background: rgb(236, 233, 229);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+main{
+   width:29em;
+   min-height:25em;
+   border:2px solid orangered;
+   border-radius: .5em;
+   background: rgb(246, 243, 239);
+   overflow: hidden;
+}
+
+.choose{
+   display:flex;
+   border-bottom: 2px solid orangered;
+}
+
+.ch{
+   width:50%;
+   text-align: center;
+   padding:.5em 0;
+   cursor: pointer;
+}
+
+.choose div:first-child{
+   border-right:2px solid orangered;
+}
+
+.ch h1{
+   font-size:1.5rem;
+   font-weight: 300;
+   color:rgb(25, 25, 26);
+}
+
+.active{
+   background: rgb(231, 228, 224);
+}
+
+/*
+LOGIN
+*/
+
+form{
+   height:calc(100% - 47px);
+   padding:1em;
+   min-width: 100%;
+}
+
+#log div{
+   margin: 3em auto;
+   width:100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position:relative;
+}
+
+#log input[type='text'], #log input[type='password'], #reg input[type='text'], #reg input[type='password']{
+   width:clamp(100px,80%,80%);
+   border:2px solid orangered;
+   border-radius: .3em;
+   outline:0;
+   padding:.5em 1em;
+   font-size:1.1rem;
+   font-weight: 300;
+   background:none;
+   position:relative;
+}
+
+#log input[type='checkbox']{
+   margin:0 0 2em 3.2em;
+   cursor:pointer;
+}
+
+#log label{
+   cursor:pointer;
+}
+
+#log div:nth-child(2){
+   margin-bottom:1em;
+}
+
+#log a{
+   display:block;
+   width:80%;
+   margin:0 auto 3em auto;
+   text-decoration: none;
+   color:rgb(202, 54, 0);
+   transition:.4s;
+}
+
+#log a:hover{
+   color: rgb(112, 14, 0);
+   text-decoration: underline;
+}
+
+#log span, 
+#item span{
+   position:absolute;
+   font-weight: 300;
+   pointer-events: none;
+   transition: .3s;
+   background: rgb(246, 243, 239);
+}
+
+#log button,
+#reg button{
+   display: block;
+   margin:0 auto;
+   padding:1.3em 3.3em;
+   border:2px solid rgb(78, 143, 240);
+   font-size: 1.2rem;
+   cursor:pointer;
+   background:none;
+   color:rgb(78, 143, 240);
+   position: relative;
+}
+
+#log button::before,
+#log button::after,
+#reg button::before,
+#reg button::after{
+   position:absolute;
+   content: '';
+   background:rgb(246, 243, 239);
+   transition:.3s;
+}
+
+#log button::before,
+#reg button::before{
+   top:-2px;
+   width:60%;
+   height:calc(100% + 4px);
+   left:50%;
+   transform: translateX(-50%);
+}
+#log button:hover::before,
+#reg button:hover::before{
+   width:0;
+}
+
+
+#log button::after,
+#reg button::after{
+   left:-2px;
+   width:calc(100% + 4px);
+   height:60%;
+   top:50%;
+   transform: translateY(-50%);
+}
+#log button:hover::after,
+#reg button:hover::after{
+   height:0;
+}
+
+#log button span,
+#reg button span{
+   position: absolute;
+   left:50%;
+   top:50%;
+   transform: translate(-50%,-50%);
+   z-index: 100;
+}
+
+/**/
+
+#sep{
+   display: flex;
+   flex-shrink: 0;
+   position: relative;
+}
+/**/
+
+/*
+REGISTER
+*/
+
+#reg div{
+   margin: 0 auto .6em auto;
+   width:100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position:relative;
+}
+
+#reg div:nth-child(5){
+   margin-bottom:.9em;
+}
+
+input[type='checkbox'],
+#reg label{
+   cursor:pointer;
+}
+
+#reg label{
+   font-size:.8rem;
+   margin:0 0 .3em .3em;
+}
+
+label a{
+   color:crimson;
+}
+
+#logErr{
+   position: absolute;
+   top:1em;
+   left:50%;
+   transform: translateX(-50%);
+   color:red;
+   font-weight: 700;
+   text-shadow: .5px .5px 1px black;
+}
+
+#regErr{
+   color:red;
+   font-weight: 300;
+   font-size:.85rem;
+   text-align: center;
+}
+
+#backArr{
+   position:fixed;
+   right:.5em;
+   bottom:.5em;
+   transition:.3s;
+   font-size:2rem;
+   cursor:pointer;
+   border-radius:.5em;
+}
+
+#backArr:hover{
+   background:rgb(201, 196, 196);
+   transform: rotate(360deg);
+}
